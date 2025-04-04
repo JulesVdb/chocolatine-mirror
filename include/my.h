@@ -6,7 +6,7 @@
 */
 
 #ifndef MY_H_
-    #define MY_H_7
+    #define MY_H_
 
     #include <stdio.h>
 
