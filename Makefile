@@ -4,6 +4,7 @@
 ## File description:
 ## Makefile
 ##
+
 CC = gcc
 CFLAGS = -Wall -Wextra -I include
 LDFLAGS = -lcriterion
@@ -24,13 +25,13 @@ src/main.o: src/main.c
 
 src/print.o: src/print.c
 	$(CC) $(CFLAGS) -c src/print.c -o src/print.o
- 
+
 tests_run: $(TEST_BIN)
 	./$(TEST_BIN)
- 
+
 $(TEST_BIN): $(TEST_OBJ) $(OBJ)
 	$(CC) $(TEST_OBJ) $(OBJ) -o $(TEST_BIN) $(LDFLAGS)
- 
+
 tests/tests.o: tests/tests.c
 	$(CC) $(CFLAGS) -c tests/tests.c -o tests/tests.o
 
